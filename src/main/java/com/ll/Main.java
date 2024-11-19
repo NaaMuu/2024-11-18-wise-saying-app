@@ -14,7 +14,6 @@ class App {
         String[] strs = new String[2];
         String[] names = new String[2];
         int count = 0;
-
         System.out.println("== 명언 앱 ==");
 
         while (true) {
@@ -26,7 +25,7 @@ class App {
                 strs[count] = sc.nextLine();
                 System.out.print("작가 : ");
                 names[count] = sc.nextLine();
-                System.out.println((count+1) + "번 명언이 등록되었습니다.");
+                System.out.println((count +1) + "번 명언이 등록되었습니다.");
                 count++;
             }
 
@@ -34,8 +33,19 @@ class App {
                 System.out.println("번호 / 작가 / 명언");
                 System.out.println("----------------------");
                 while (count > 0) {
-                    System.out.println(count + " / " + names[count-1] + " / " + strs[count-1]);
+                    System.out.println(count + " / " + names[count -1] + " / " + strs[count -1]);
                     count--;
+                }
+            }
+
+            else if (cmd.equals("삭제")) {
+                System.out.print("?id=");
+                int id = sc.nextInt();
+                sc.nextLine();
+                if (cmd.equals("삭제") && strs[id] != "") {
+                    strs[id] = "";
+                    names[id] = "";
+                    System.out.println(id + "번 명언이 삭제되었습니다.");
                 }
             }
 
