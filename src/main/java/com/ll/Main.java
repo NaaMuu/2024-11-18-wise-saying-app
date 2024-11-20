@@ -42,7 +42,10 @@ class App {
                 System.out.print("?id=");
                 int id = sc.nextInt();
                 sc.nextLine();
-                if (cmd.equals("삭제") && strs[id] != "") {
+                if (strs[id] == null) {
+                    System.out.println(id + "번 명언은 존재하지 않습니다.");
+                }
+                else if (strs[id] != null) {
                     strs[id] = "";
                     names[id] = "";
                     System.out.println(id + "번 명언이 삭제되었습니다.");
