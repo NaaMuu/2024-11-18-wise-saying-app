@@ -1,10 +1,16 @@
 package com.ll;
 import java.util.*;
 
-class Quote {
+class wiseSaying {
     int id;
-    String name;
-    String quote;
+    String author;
+    String wiseSaying;
+
+    public wiseSaying(int id, String author, String wiseSaying) {
+        this.id = id;
+        this.author = author;
+        this.wiseSaying = wiseSaying;
+    }
 }
 
 public class Main {
@@ -15,7 +21,6 @@ public class Main {
 }
 
 class App {
-
     public void run() {
         Scanner sc = new Scanner(System.in);
         String[] strs = new String[2];
